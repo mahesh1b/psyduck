@@ -62,11 +62,11 @@ Passionate individual with over 3 years of experience in AWS cloud infrastructur
 
 ## Certifications
 
-<!-- ![CKA](cka.png) 
+![CKA](cka.png) 
 ![AWS CCP](aws-ccp.png)  
 ![AWS SAA](aws-csaa.png)  
 ![AWS Security Specialty](aws-css.png)  
 ![RHCSA](rhcsa.png)  
-![Azure Fundamentals](ms-az900.png)   -->
+![Azure Fundamentals](ms-az900.png)  
 
 ---
