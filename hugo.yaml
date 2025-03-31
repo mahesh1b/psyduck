@@ -8,13 +8,29 @@ caches:
     dir: :cacheDir/images
 
 params:
-  assets:
-    customCSS:
-      - css/custom.css
   ShowBreadCrumbs: true
   ShowReadingTime: true
   cover:
     linkFullImages: true
+  profileMode:
+    enabled: true
+    title: Psyduck
+    imageUrl: "images/me.jpeg"
+    buttons:
+      - name: Resume
+        url: resume
+      - name: Blogs
+        url: blogs
+      - name: About me
+        url: about-me
+
+  socialIcons:
+    - name: github
+      title: View Source on Github
+      url: "https://github.com/mahesh1b"
+    - name: Linkedin
+      title: Connect on Linkedin
+      url: "https://linkedin.com/in/mahesh-bhosle-301a3619b"
 
 menu:
   main:
@@ -22,18 +38,22 @@ menu:
       name: about me
       url: /about-me/
       weight: 10
+    - identifier: blogs
+      name: blogs
+      url: /blogs/
+      weight: 20
     - identifier: Resume
       name: resume
       url: /resume/
-      weight: 20
+      weight: 30
     - identifier: Tags
       name: tags
       url: /tags/
-      weight: 30
+      weight: 40
     - identifier: wallpapers
       name: wallpapers
       url: /wallpapers/
-      weight: 40 
+      weight: 50 
     - identifier: dotfiles
       name: dotfiles
       url: /dot-files/
