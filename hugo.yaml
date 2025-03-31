@@ -1,0 +1,37 @@
+baseURL: https://example.org/
+languageCode: 'en-us'
+title: "Psyduck's lair"
+theme: 'PaperMod'
+
+caches:
+  images:
+    dir: :cacheDir/images
+
+params:
+  ShowBreadCrumbs: true
+  ShowReadingTime: true
+  cover:
+    linkFullImages: true
+
+menu:
+  main:
+    - identifier: about me
+      name: about me
+      url: /about-me/
+      weight: 10
+    - identifier: Resume
+      name: resume
+      url: /resume/
+      weight: 20
+    - identifier: dotfiles
+      name: dotfiles
+      url: /dot-files/
+      weight: 30
+    - identifier: wallpapers
+      name: wallpapers
+      url: /wallpapers/
+      weight: 40 
+    - identifier: Tags
+      name: tags
+      url: /tags/
+      weight: 50 
