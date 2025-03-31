@@ -4,13 +4,13 @@ layout: "about me"
 url: /about-me/
 summary: "about-me"
 cover: 
-    image: images/image.png
+    image: images/me.jpeg
     # alt: 'image alt'
     # caption: 'image caption'
 ---
 
-- **Name**: Mahesh Bhosle, the Cloud Engineer 🧑‍💻☁️  
-- **Type**: DevOps Engineer, Cloud Infrastructure Engineer 🌐🔧  
+- **Name**: Mahesh Bhosle 🧑‍💻  
+- **Type**: DevOps Engineer, Cloud Infrastructure Engineer, SRE, Plaform Engineer 🌐🔧  
 - **Card Number**: #22  
 - **Rarity**: Rare (Expert in AWS, Kubernetes, and Security) 🌟⚡  
 - **HP**: 100 💪🔧  
