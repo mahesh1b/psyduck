@@ -8,6 +8,9 @@ caches:
     dir: :cacheDir/images
 
 params:
+  assets:
+    customCSS:
+      - css/custom.css
   ShowBreadCrumbs: true
   ShowReadingTime: true
   cover:
@@ -23,15 +26,15 @@ menu:
       name: resume
       url: /resume/
       weight: 20
-    - identifier: dotfiles
-      name: dotfiles
-      url: /dot-files/
+    - identifier: Tags
+      name: tags
+      url: /tags/
       weight: 30
     - identifier: wallpapers
       name: wallpapers
       url: /wallpapers/
       weight: 40 
-    - identifier: Tags
-      name: tags
-      url: /tags/
-      weight: 50 
+    - identifier: dotfiles
+      name: dotfiles
+      url: /dot-files/
+      weight: 50
