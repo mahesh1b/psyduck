@@ -13,7 +13,7 @@ params:
   cover:
     linkFullImages: true
   profileMode:
-    enabled: true
+    enabled: false
     title: Psyduck
     imageUrl: "images/me.jpeg"
     buttons:
@@ -50,10 +50,10 @@ menu:
       name: tags
       url: /tags/
       weight: 40
-    - identifier: wallpapers
-      name: wallpapers
-      url: /wallpapers/
-      weight: 50 
+    # - identifier: wallpapers
+    #   name: wallpapers
+    #   url: /wallpapers/
+    #   weight: 50 
     - identifier: dotfiles
       name: dotfiles
       url: /dot-files/

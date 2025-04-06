@@ -5,8 +5,8 @@ title: 'Terraform State Migration'
 tags: ["terraform"]
 cover: 
     image: images/statefile-migration.jpg
-    imageWidth: 120
-    imageHeight: 120
+    responsiveImages: true
+    linkFullImages: true
 ---
 
 When managing infrastructure as code using Terraform, one common challenge is dealing with large and complex state files. Over time, as more resources are managed, the state file grows, complicating understanding and increasing Terraform's execution time. This article presents practical solutions to efficiently manage and migrate Terraform state files without recreating the existing resources.
@@ -20,10 +20,8 @@ Migrating Terraform state files can help in several ways:
 - **Efficiency:** Managing fewer resources per state file can simplify troubleshooting and updates.
 
 
-<div style={{ backgroundColor: "#C5DDE3", padding: "0.5rem", color: "black" }}>
 ⚠️ **Precautions** ⚠️:
 Before altering state files, it's crucial to back them up to prevent potential data loss. Always ensure that backups are secure and up-to-date.
-</div>
 
 ### Migration Scenarios
 

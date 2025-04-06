@@ -2,9 +2,11 @@
 date: '2025-03-31T16:52:51+05:30'
 draft: false
 title: 'Running GitHub Actions on Local'
-tags: ["git", "cicd"]
+tags: ["github", "cicd"]
 cover: 
     image: images/gha-on-local.jpg
+    responsiveImages: true
+    linkFullImages: true
 ---
 
 GitHub Actions has been one of the popular platforms among developers to automate software workflows, enabling them to streamline CI/CD pipelines and automate testing processes. However, testing and iterating on these workflows directly on GitHub can be time-consuming and expensive, especially when dealing with complex actions or debugging errors. That's where the act tool comes in. It offers a seamless solution for running GitHub Actions locally on a local system.
