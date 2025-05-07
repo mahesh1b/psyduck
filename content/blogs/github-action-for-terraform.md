@@ -160,9 +160,11 @@ module "s3_bucket" {
   versioning  = "Enabled"
 }
 ```
-I will commit and push a code to branch s3 and create PR. This will trigger a GitHub action `Terraform format and plan` which will perform terraform format and plan and show the plan if the PR is output. Terraform format [`dflook/terraform-apply`](https://github.com/dflook/terraform-github-actions/tree/main/terraform-apply) is optional but it is always good practice to perform format checks to keep the code format linear.
-![pull request](/images/tf-pr.png)
-To apply the changes I am using similar workflow as previous one with one change i.e. I am using [`Terraform fmt-check`](https://github.com/dflook/terraform-github-actions/tree/main/terraform-fmt-check) to perform terraform apply. Here is the full workflow.
+I will commit and push a code to branch s3 and create PR. This will trigger a GitHub action `Terraform format and plan` which will perform terraform format and plan and show the plan if the PR is output. Terraform format [`dflook/terraform-fmt-check`](https://github.com/dflook/terraform-github-actions/tree/main/terraform-fmt-check) is optional but it is always good practice to perform format checks to keep the code format linear.
+
+
+
+To apply the changes I am using similar workflow as previous one with one change i.e. I am using [`dflook/terraform-apply`](https://github.com/dflook/terraform-github-actions/tree/main/terraform-apply) to perform terraform apply. Here is the full workflow.
 ```yaml
 name: Terraform Apply
 
@@ -240,5 +242,6 @@ jobs:
           path: ${{ matrix.dir }}
 ```
 Once the PR is merged `Terraform Apply` workflow is triggered which performs terraform apply.
-![pr merged](/images/merged-pr.png)
+
+
 By automating Terraform plans on PRs and applies on merges via GitHub Actions, teams gain both efficiency and reliability in infrastructure management. This GitOps-inspired approach enforces version-controlled changes, reduces manual errors, and provides built-in audit trails—all while maintaining the safety of peer reviews. The solution balances automation with control, making it practical for production environments yet simple enough to implement immediately. For teams adopting IaC, this workflow delivers the core benefits of GitOps without requiring complex operators, creating a foundation for scalable, collaborative infrastructure management.
