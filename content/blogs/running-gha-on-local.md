@@ -149,14 +149,6 @@ Stage  Job ID        Job name      Workflow name             Workflow file   Eve
 0      build         build         Build and Test React App  node.js.yml     push,pull_request
 ```
 So as per the output, we have 5 jobs out of which 2 jobs belong to **Code Check** workflow and the rest to the **Build and Test React App**.
-<div style={{ backgroundColor: "#C5DDE3", padding: "1rem" }}>
-  **NOTE**: If you too feel annoyed by the warning then use
-  **--container-architecture linux/amd64** flag or just add it to the
-  **~/.actrc** file. 
-  ``` 
-  echo '--container-architecture linux/amd64' >> ~/.actrc
-  ```
-</div>
 
 Lets check all jobs that are triggered for **push** event:
 
