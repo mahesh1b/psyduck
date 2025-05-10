@@ -17,4 +17,4 @@ jobs:
 
       - name: Run markdownlint in docker container
         run: |
-          docker run -v $PWD:/workdir ghcr.io/igorshubovych/markdownlint-cli:latest "content/*.md"
+          docker run -v $PWD:/workdir ghcr.io/igorshubovych/markdownlint-cli:latest "content/*.md content/blog/*.md"
