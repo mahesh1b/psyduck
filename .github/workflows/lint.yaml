@@ -1,20 +1,25 @@
-name: Check the code with linters
+name: Lint Markdown Files
 
 on:
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  Lint:
+  markdownlint:
+    name: Run markdownlint
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Run markdownlint in docker container
+      - name: Run markdownlint
         run: |
-          docker run -v $PWD:/workdir ghcr.io/igorshubovych/markdownlint-cli:latest "content/*.md content/blog/*.md"
+          docker run \
+            -v ${{ github.workspace }}:/workdir \
+            -w /workdir \
+            ghcr.io/igorshubovych/markdownlint-cli:latest \
+            "content/*.md" "content/blogs/*.md"
