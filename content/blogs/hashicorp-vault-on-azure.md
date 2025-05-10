@@ -1,7 +1,8 @@
 ---
 date: '2025-05-08T08:59:46+05:30'
 draft: false
-title: 'Hashicorp Vault on Azure AKS'
+title: 'Hashicorp Va""ult on Azure AKS'
+tags: ["vault", "Azure", "terraform", "AKS"]
 cover: 
     image: images/hashicorp-vault-on-azure.jpg
     responsiveImages: true
