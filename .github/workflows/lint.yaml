@@ -15,14 +15,6 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          cache: 'npm'
-
-      - name: Install makrdowan
-        run: npm install -g markdownlint-cli
-
-      - name: Lint markdown files
-        run: markdownlint content/*.md content/blogs/*.md
+      - name: Run markdownlint in docker container
+        run: |
+          docker run -v $PWD:/workdir ghcr.io/igorshubovych/markdownlint-cli:latest "content/*.md"
