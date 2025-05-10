@@ -1,0 +1,28 @@
+name: Check the code with linters
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install makrdowan
+        run: npm install -g markdownlint-cli
+
+      - name: Lint markdown files
+        run: markdownlint content/*.md content/blogs/*.md
