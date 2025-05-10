@@ -32,6 +32,10 @@ params:
       title: Connect on Linkedin
       url: "https://linkedin.com/in/mahesh-bhosle-301a3619b"
 
+  assets: 
+      disableHLJS: true 
+      favicon: "assets/psyduck.svg" 
+
 menu:
   main:
     - identifier: about me
