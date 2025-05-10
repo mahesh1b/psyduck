@@ -1,0 +1,25 @@
+name: Lint Markdown Files
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  markdownlint:
+    name: Run markdownlint
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Run markdownlint
+        run: |
+          docker run \
+            -v ${{ github.workspace }}:/workdir \
+            -w /workdir \
+            ghcr.io/igorshubovych/markdownlint-cli:latest \
+            "content/*.md" "content/blogs/*.md"
